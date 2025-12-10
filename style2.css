@@ -1,0 +1,338 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    background-color: rgb(133, 161, 170);
+    line-height: 1.6;
+}
+
+header {
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 80px;
+    gap: 60px;
+}
+
+.logo {
+    color: rgb(96, 34, 34);
+    font-size: 18px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: bold;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: rgb(40, 45, 57);
+    font-size: 20px;
+    font-weight: 500;
+    padding: 8px 5px;
+    white-space: nowrap;
+    display: block;
+    text-align: center;
+    line-height: 1.2;
+    transition: color 0.2s ease;
+}
+
+.menu li a br {
+    display: none;
+}
+
+.menu li a:hover {
+    color: rgb(96, 34, 34);
+}
+
+.active {
+    color: rgb(96, 34, 34);
+    border-bottom: 2px solid rgb(96, 34, 34);
+}
+
+
+/* Контейнеры и отступы */
+.container {
+    max-width: 1200px;
+    margin: 0 auto 60px auto;
+    padding: 0 15px;
+}
+
+.content {
+    max-width: 1200px;
+    margin: 0 auto 60px auto;
+    padding: 0 20px;
+}
+
+.btn {
+    background-color: rgb(96, 34, 34);
+    text-decoration: none;
+    color: whitesmoke;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 25px;
+    transition: all 0.2s ease;
+}
+
+.btn:hover {
+    background-color: rgb(18, 10, 40);
+    color: white;
+}
+
+/* Карточки магазина (маленькие) */
+#node_for_insert .card {
+    background: white;
+    border-radius: 10px;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    border: none;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    transition: box-shadow 0.2s ease;
+    min-height: 320px;
+}
+
+#node_for_insert .card:hover {
+    box-shadow: 0 4px 12px rgba(96, 34, 34, 0.15);
+}
+
+#node_for_insert .card-image {
+    width: 100%;
+    height: 150px;
+    object-fit: contain;
+    border-radius: 8px;
+    margin-bottom: 8px;
+}
+
+#node_for_insert .card-title {
+    margin-bottom: 8px;
+    font-weight: 800;
+    font-size: 15px;
+    text-align: center;
+    text-transform: uppercase;
+    color: rgb(96, 34, 34);
+}
+
+#node_for_insert .card-text {
+    font-size: 12px;
+    color: #333;
+    line-height: 1.4;
+    flex-grow: 1;
+    margin-bottom: 8px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+#node_for_insert .card-price {
+    color: rgb(96, 34, 34);
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Футер */
+.footer {
+    text-align: center;
+    padding: 30px 0;
+    background-color: rgba(255, 255, 255, 0.9);
+    margin-top: 50px;
+}
+ .shop-section{
+    margin-top: 30px;
+    text-align: center;
+    color: rgb(96, 34, 34);
+    font-weight: bolder;
+    font-size: 35px;
+}
+.about_text {
+    text-align: justify;
+    color: rgb(40, 45, 57);
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.back-to-top {
+    text-decoration: none;
+    color: rgb(96, 34, 34);
+    font-weight: bold;
+    padding: 10px 20px;
+    border: 2px solid rgb(96, 34, 34);
+    border-radius: 25px;
+    transition: all 0.2s ease;
+}
+
+.back-to-top:hover {
+    background-color: rgb(96, 34, 34);
+    color: white;
+}
+@media (max-width: 1200px) {
+    .cards-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    #node_for_insert .card {
+        min-height: 300px;
+    }
+    
+    #node_for_insert .card-image {
+        height: 140px;
+    }
+}
+
+@media (max-width: 992px) {
+    nav {
+        flex-wrap: wrap;
+        height: auto;
+        padding: 15px 20px;
+        gap: 20px;
+    }
+    
+    .menu ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        width: 100%;
+    }
+    
+    .cards-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .card {
+        min-height: 450px;
+    }
+    
+    .card-image {
+        height: 250px;
+    }
+    
+    #node_for_insert .card {
+        min-height: 280px;
+        padding: 10px;
+    }
+    
+    #node_for_insert .card-image {
+        height: 130px;
+    }
+    
+    #node_for_insert .card-title {
+        font-size: 14px;
+    }
+    
+    #node_for_insert .card-text {
+        font-size: 11px;
+    }
+}
+
+/* Адаптивность для мобильных */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        padding: 10px 15px;
+        gap: 15px;
+    }
+    
+    .menu ul {
+        flex-direction: column;
+        gap: 8px;
+        display: flex !important;
+    }
+    
+    .menu li {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .menu li a {
+        padding: 10px;
+        border: 1px solid rgba(96, 34, 34, 0.1);
+        border-radius: 5px;
+        background: rgba(255, 255, 255, 0.9);
+    }
+    
+    .logo {
+        text-align: center;
+        font-size: 16px;
+        width: 100%;
+    }
+    
+    .menu li a br {
+        display: inline;
+    }
+    
+    .cards-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .card {
+        min-height: 400px;
+        padding: 15px;
+    }
+    
+    .card-image {
+        height: 200px;
+    }
+    
+    #node_for_insert .card {
+        min-height: 260px;
+        max-width: 280px;
+        margin: 0 auto;
+    }
+    
+    #node_for_insert .card-image {
+        height: 120px;
+    }
+}
+
+@media (max-width: 576px) {
+    .logo {
+        font-size: 14px;
+    }
+    
+    .menu li a {
+        font-size: 13px;
+        padding: 8px;
+    }
+    
+    .card {
+        min-height: 380px;
+    }
+    
+    .card-image {
+        height: 180px;
+    }
+    
+    .shop-section, .ideas_section, .about_section {
+        font-size: 24px;
+    }
+    
+    #node_for_insert .card {
+        min-height: 240px;
+    }
+}
